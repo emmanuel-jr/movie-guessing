@@ -13,29 +13,39 @@
 <body style="font-family: 'Comic Sans MS', cursive, sans-serif;">
     <div class="container">
         <div class="jumbotron mt-4 border border-dark">
-          <h2 class="text-center mb-5" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">Welcome to Guess The Movie!</h2>
-          <div>These are movie titles you have to try so hard to guess given funny clues/hints</div>
-          <div>Fortunately, or unfortunately you have 3 guesses</div>
-          <div>Have fun!</div>
-          <hr>
+            <div class="card text-white bg-secondary mb-3 container-fluid" style="max-width: 19rem; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                <div class="card-header">Welcome to Guess The Movie!</div>
+            </div>
+            <div class="text-center">
+                These are movie titles you have to try so hard to guess given funny clues/hints
+                </br>Fortunately, or unfortunately you have 3 guesses
+                <p><h4>Have fun!</h4></p>
+            </div>
+            <hr>
           <!--Movie description will go here-->
-          <p class="movie-description text-center"></p>
-          <hr class="my-4">
-          <p class="error text-center"></p>
-          <div class="form-group">
-            <input type="text" class="form-control" id="guess-input" placeholder="The movie is...">
-          </div>
-          <div class="row justify-content-center">
-            <a class="btn btn-primary" href="#" role="button" id="guess-btn">Check</a>
-          </div>
+            <p class="movie-description text-center"></p>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+              <p class="error text-center"></p>
+            </div>
+            <div class="form-group">
+                <div class="row justify-content-center">
+                    <input type="text" class="form-control text-center" id="guess-input" style="max-width: 25rem;"  placeholder="The movie is...">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+              <a class="btn btn-outline-primary" style="margin-bottom: 30px;" href="#" role="button" onclick="guessbutton()" id="guess-btn">Check</a>
+            </div>
           <!--Answer will pop up here as well as turns remaining-->
-          <p class="message mt-3 text-center"></p>
-          <hr>
-          <div class="row justify-content-center">
-            <a class="btn btn-secondary" href="#" role="button" id="hint-btn">Show the Hint</a>
-          </div>
+            <div class="row justify-content-center">
+              <p class="message mt-3"></p>
+            </div>
+            <hr>
+            <div class="row justify-content-center">
+              <a class="btn btn-outline-secondary" href="#" role="button" onclick="hintbutton()" id="hint-btn">Show the Hint</a>
+            </div>
           <!--Hint will pop up here-->
-          <p class="hint mt-3 text-center"></p>
+            <p class="hint mt-3 text-center"></p>
         </div>
     </div>
     

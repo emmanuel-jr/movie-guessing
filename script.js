@@ -30,17 +30,19 @@ const message = document.querySelector('.message');
 const errorMsg = document.querySelector('.error');
 
 
-const num = () => {
+getRandomNum = () => {
     return Math.floor(Math.random()*(max-min));
 }
 
+const num =  getRandomNum();
+
 hintbutton = () => {
-    document.querySelector('.hint').textContent = movies[num()].hint;
+    document.querySelector('.hint').textContent = movies[num].hint;
 }
 
 guessbutton = () => {
 
-  const rightMovie = movies[num()].title;
+  const rightMovie = movies[num].title;
   let guess = document.querySelector('#guess-input').value;
 
   if(guess === ''){
@@ -76,7 +78,7 @@ guessbutton = () => {
 }
 
 
-document.querySelector('.movie-description').textContent = `Brief Description: ${movies[num()].explanation}`;
+document.querySelector('.movie-description').textContent = `Brief Description: ${movies[num].explanation}`;
 
 document.getElementById("guess-input").addEventListener("keyup", (event) => {
     if (event.keyCode === 13) {
